@@ -1,0 +1,15 @@
+.row{
+    padding: 20px;
+    margin-top: 40px;
+}
+div {
+    background-color: rgb(105, 8, 61);
+    color: white;
+}
+
+#rprojects{
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,35 @@
+.row{
+    padding: 20px;
+}
+#columnaeduc {
+    background-color: rgb(105, 8, 61);
+    color: white;
+    text-align: right;
+}
+
+h4{
+    font-size: smaller;
+    color: lightblue;
+    margin-top: -8px;
+}
+#educ{
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-right: -10px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px){
+    ul{
+            margin-right: 40px;
+    }
+    #educ{
+        margin-right: -60px;
+    }
+}
+
+.carreras{
+    font-size: smaller;
+    color: antiquewhite;
+    margin-top: -16px;
+}

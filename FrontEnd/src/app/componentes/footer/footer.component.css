@@ -1,0 +1,9 @@
+footer {
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2cm;
+    box-shadow: 2px -2px 5px brown;
+}
