@@ -5,6 +5,11 @@ div {
     background-color: rgb(105, 8, 61);
     color: white;
 }
+
+td{
+    color: white;
+}
+
 h4{
     font-size: smaller;
     color: lightblue;
