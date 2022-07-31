@@ -2,34 +2,33 @@
     <div class="col-lg-6"></div>
     <div id="columnaeduc" class="col-lg-6">
         <ul dir="rtl">
-            <h1 id="educ">Educación</h1>
-            <li>
-                <h2>ESTUDIOS PRIMARIOS</h2>
-                <h4>2003-2009</h4>
-            </li>
-            <p>Escuela Ingeniero Pico N°10 D.E. 11</p>
-            <li>
-                <h2>ESTUDIOS SECUNDARIOS</h2>
-                <h4>2010-2014</h4>
-            </li>
-            <p>Instituto Nuestra Señora del Milagro (A-98)</p>
-            <p class="carreras">Bachiller con capacitación laboral como auxiliar en Comercio Exterior</p>
-            <li>
-                <h2>CURSO DE IDIOMA INGLÉS C.E.C.I.E</h2>
-                <h4>2007-2012</h4>
-            </li>
-            <p>Escuela Ingeniero Pico N°10 D.E. 11</p>
-            <li>
-                <h2>CURSO DE IDIOMA PORTUGUÉS</h2>
-                <h4>2011-2012</h4>
-            </li>
-            <p>Instituto Nuestra Señora del Milagro (A-98)</p>
-            <li>
-                <h2>ESTUDIOS TERCIARIOS</h2>
-                <h4>2018-2020</h4>
-            </li>
-            <p>Instituto Gastronómico Internacional (I.G.I.)</p>
-            <p class="carreras">Profesional gastronómico nacional e internacional</p>
+            <h1 id="educ"><i class="bi bi-book-half"></i> Educación</h1>
+            <div class="col-lg-3">
+                <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged">
+                    <i class="bi bi-plus-circle"></i> Agregar educación
+                </button>
+            </div>
         </ul>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-12">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-wrench-adjustable"></i>EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash-fill"></i>BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

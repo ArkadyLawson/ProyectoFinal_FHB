@@ -8,6 +8,7 @@ div {
 
 td{
     color: white;
+    text-align: left;
 }
 
 h4{
@@ -17,8 +18,8 @@ h4{
 }
 
 #explab{
-    text-decoration: underline;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
+    color: thistle;
 }

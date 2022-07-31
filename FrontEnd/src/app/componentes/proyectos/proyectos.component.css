@@ -7,8 +7,13 @@ div {
     color: white;
 }
 
+td{
+    color: white;
+    text-align: left;
+}
+
 #rprojects{
-    text-decoration: underline;
+    color: thistle;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;

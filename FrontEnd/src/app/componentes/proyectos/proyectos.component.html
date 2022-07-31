@@ -1,12 +1,30 @@
-<div class="row g-0">
-    <h1 id="rprojects">Proyectos realizados</h1>
+<div class="row">
+    <h1 id="rprojects"><i class="bi bi-clipboard-check-fill"></i> Proyectos</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-success" routerLink="/nuevopro" *ngIf="isLogged">
+            <i class="bi bi-plus-circle"></i> Agregar proyecto
+        </button>
+    </div>
+
     <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-        <ul>
-            <li>
-                <h2>Portfolio Web</h2>
-            </li>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque vero neque est, natus culpa ex ratione totam doloremque velit vitae rem amet distinctio veniam eveniet dolor debitis sed accusantium eum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quam id voluptatum eum provident iste, nam alias doloremque iusto magnam consequuntur deserunt optio perspiciatis possimus mollitia nihil commodi earum maxime.</p>
-        </ul>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyectos of proyectos">
+                    <td>
+                        <h2>{{Proyectos.nombreP}}</h2>
+                    </td>
+                    <td>{{Proyectos.descripcionP}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-warning" routerLink="/editpro/{{Proyectos.id}}">
+                            <i class="bi bi-wrench-adjustable"></i>EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Proyectos.id)">
+                            <i class="bi bi-trash-fill"></i>BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

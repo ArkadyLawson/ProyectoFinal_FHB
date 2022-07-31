@@ -12,8 +12,14 @@ h4{
     color: lightblue;
     margin-top: -8px;
 }
+
+td{
+    color: white;
+    text-align: left;
+}
+
 #educ{
-    text-decoration: underline;
+    color: thistle;
     margin-top: 20px;
     margin-right: -10px;
     margin-bottom: 20px;
@@ -26,10 +32,4 @@ h4{
     #educ{
         margin-right: -60px;
     }
-}
-
-.carreras{
-    font-size: smaller;
-    color: antiquewhite;
-    margin-top: -16px;
 }
